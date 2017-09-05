@@ -9,6 +9,7 @@
 import Foundation
 class FlickrParseClient {
     
+    
     // MARK: Shared Instance
     
     class func sharedInstance() -> FlickrParseClient {
@@ -18,10 +19,8 @@ class FlickrParseClient {
         return Singleton.sharedInstance
     }
     
-    
-    
-    // Reference : Used from "Flick Finder" Jarod Udacity, Created by Jarrod Parkes on 11/5/15.
-    func bboxString( latitude : Double , longitude : Double ) -> String {
+
+        func bboxString( latitude : Double , longitude : Double ) -> String {
         
         // Checking Valid Map Coordinates
         if(latitude == 0.0 && longitude == 0.0) {
