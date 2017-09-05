@@ -159,12 +159,12 @@ class PhotoVTViewController: UIViewController,UICollectionViewDelegate,UICollect
             var storedPhotos :[Photo] = []
             
             // if photos of selected pin retrieve are less than 20 then return all photos of Selected Pin to the collectionView Photo display grid
-            if selectedPinPhotos.count <= 20 {
+            if selectedPinPhotos.count <= 30 {
                 collectionViewPhoto = selectedPinPhotos
             }
                 // else randomly select photos from 20 using arc4random_uniform
             else {
-                for _ in 1...20 {
+                for _ in 1...30 {
                     
                     let arcRandomIndex = Int(arc4random_uniform(UInt32(selectedPinPhotos.count)))
                     storedPhotos.append(selectedPinPhotos[arcRandomIndex])
