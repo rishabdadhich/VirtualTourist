@@ -39,6 +39,8 @@ class PhotoVTViewController: UIViewController,UICollectionViewDelegate,UICollect
        
         
         super.viewDidLoad()
+        
+        
         // setup map
         let regionDist:CLLocationDistance = 1200
         let mapArea = MKCoordinateRegionMakeWithDistance(mapSegueSelectedPin.coordinate, regionDist*2.0, regionDist*2.0)
@@ -46,6 +48,9 @@ class PhotoVTViewController: UIViewController,UICollectionViewDelegate,UICollect
         PhotoVTMap.setRegion(mapArea, animated: true)
         //adding pin to region
         PhotoVTMap.addAnnotation(mapSegueSelectedPin)
+        
+       
+        
         
         //view loaded Active
         isPhotoViewActive = true
@@ -130,6 +135,9 @@ class PhotoVTViewController: UIViewController,UICollectionViewDelegate,UICollect
     }
 
     @IBAction func getNewPhotosOrDelete(_ sender: Any) {
+        
+       
+        
         //Check whether Photos to be deleted or not
         
         
@@ -145,7 +153,10 @@ class PhotoVTViewController: UIViewController,UICollectionViewDelegate,UICollect
             
             photosDeleted = collectionViewPhoto
             if selectedPinPhotos.count > 0 {
-                getNewPhotosOrDelete(sender)
+                
+             print("selected pin photos are empty")
+                
+//                           getNewPhotosOrDelete(sender)
                 
             }
             else {
